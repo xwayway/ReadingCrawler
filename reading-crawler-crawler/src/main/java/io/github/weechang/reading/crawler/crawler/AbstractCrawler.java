@@ -1,5 +1,7 @@
 package io.github.weechang.reading.crawler.crawler;
 
+import org.jsoup.nodes.Document;
+
 /**
  * 爬虫
  *
@@ -9,16 +11,47 @@ package io.github.weechang.reading.crawler.crawler;
  */
 public abstract class AbstractCrawler {
 
-    protected String baseUrl = "";
-    protected String currentUrl = "";
-    protected String nextUrl = "";
-    protected String lastUrl = "";
+    protected Document page = null;
+    protected String nextUrl = null;
+    protected String lastUrl = null;
 
+    /**
+     * 获取页面内容 —— 对外
+     *
+     * @param url Url
+     * @return 页面内容
+     */
     public abstract String getPage(String url);
 
-    public abstract String getContent(String url);
+    /**
+     * 获取下一页URL
+     */
+    public String getNextUrl() {
+        return nextUrl;
+    }
 
-    public abstract String getNext();
+    /**
+     * 获取上一页URL
+     */
+    public String getLastUrl() {
+        return lastUrl;
+    }
 
-    public abstract String getLast();
+    /**
+     * 获取内容
+     *
+     * @return 页面内容
+     */
+    protected abstract String getContent();
+
+    /**
+     * 获取下一页URL
+     */
+    protected abstract void getNext();
+
+    /**
+     * 获取上一页URL
+     */
+    protected abstract void getLast();
+
 }

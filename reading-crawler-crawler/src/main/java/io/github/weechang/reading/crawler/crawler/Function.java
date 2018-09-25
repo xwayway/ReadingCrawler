@@ -7,5 +7,6 @@ package io.github.weechang.reading.crawler.crawler;
  * date 2018/9/21
  * time 17:31
  */
-public abstract class AbstractFunction {
+public class Function {
+
 }
