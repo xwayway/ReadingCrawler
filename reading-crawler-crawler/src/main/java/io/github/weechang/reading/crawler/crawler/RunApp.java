@@ -10,6 +10,8 @@ package io.github.weechang.reading.crawler.crawler;
 public class RunApp {
 
     public static void main(String[] args) {
-
+        String firstUrl = "https://www.biqugexsw.com/35_35872/13213750.html";
+        Function f = new Function(firstUrl);
     }
+
 }

@@ -1,7 +1,6 @@
 package io.github.weechang.reading.crawler.crawler;
 
 import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 import java.io.IOException;
@@ -26,7 +25,6 @@ public class BiQuGeCrawler extends AbstractCrawler {
             e.printStackTrace();
         }
         return this.getContent();
-
     }
 
     @Override
